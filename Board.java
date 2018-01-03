@@ -6,10 +6,10 @@ public class Board{
 	
 	public Board(){
 		board=new Integer[5][5];
-	}
-	public void fullBoard(){
+
 		Random colecR=new Random();
 		HashSet<Integer> setNums=new HashSet<Integer>();
+
 		int count=25;
 		while(25>setNums.size()){
 			if(setNums.add(colecR.nextInt(100))){count++;}
@@ -25,5 +25,5 @@ public class Board{
 		board[2][2]=0;
 	}
 
-	public void printFullBoard(){for(Integer[] row:board){for(Integer num:row){System.out.println(num);};};}
+	public void printBoard(){for(Integer[] row:board){for(Integer num:row){System.out.println(num);};};}
 }
