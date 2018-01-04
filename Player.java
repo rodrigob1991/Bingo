@@ -7,8 +7,8 @@ public class Player extends People{
 		points=0;
 	}
 	
-	public void setPoint(int point){
-		points+=point;
+	public void setPoint(){
+		points++;
 	}
 	public int getPoints(){return points;}
 }

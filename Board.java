@@ -12,7 +12,7 @@ public class Board{
 
 		int count=25;
 		while(25>setNums.size()){
-			if(setNums.add(colecR.nextInt(100))){count++;}
+			if(setNums.add(colecR.nextInt(99)+1)){count++;}
 		}
 		
 		int j=0;
@@ -26,4 +26,14 @@ public class Board{
 	}
 
 	public void printBoard(){for(Integer[] row:board){for(Integer num:row){System.out.println(num);};};}
+	
+	public boolean confirmNum(Integer numEntry){
+		for(Integer[] row:board){
+			for(Integer num:row){
+				if(num==numEntry){return true;}
+			}
+		}
+		return false;	
+	}
+				
 }

@@ -26,5 +26,7 @@ public class People implements Comparable<People>{
 		return result;
 	}
 	public void printData(){System.out.println(name+"-"+age+"-"+heigth);}
+	
+	public String getName(){return name;}
 		
 }

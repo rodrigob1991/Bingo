@@ -29,9 +29,24 @@ public class StartGame{
 		for(int i=0;i<numPlayers;i++){
 			relation.put(players[i],new Board());
 		}
-		//for(Player player:players){
-			//relation.get(player).printBoard();
-		//}
+		DrawNumbers drawNums=new DrawNumbers();
+		}
 
+		String nameWinner="";
+		for(int i=0;i<100;i++){
+			Integer num=drawNums.getDrawNum();
+			for(Player player:players){
+				if(relation.get(player).confirmNum(num)){
+					player.setPoint();
+					if(player.getPoints()==24){
+						nameWinner=nameWinner.concat(player.getName().concat(" "));
+						i=100;
+					}
+				}
+			}
+		}
+		System.out.println(nameWinner);
+			
+					
 	}
 }
